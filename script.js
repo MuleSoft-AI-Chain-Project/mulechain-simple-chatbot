@@ -75,7 +75,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     function displayWelcomeMessage() {
-        const welcomeMessage = '<div class="message-content">Hi, my name is Max Mule. <br><br>I am an AI Agent built using MuleChain and deployed on MuleSoft Cloudhub 2. <br><br>Here are my key skills<br>- Checking Inventory in your <b>SAP ECC</b> System,<br>- Check order details in your <b>SAP S4H</b> System,<br>- Get account details from your <b>Salesforce</b> CRM,<br>- Get information about current Sales Leads from your <b>Hubspot</b>,<br>- Show all employees infromation from your <b>Workday</b>,<br>- and Order a Laptop for you.<br></div>';
+        const welcomeMessage = '<div class="message-content">Hi, my name is Max Mule. <br><br>I am an AI Agent built using MuleChain and deployed on MuleSoft Cloudhub 2. <br><br>Here are my key skills<br>- Checking Inventory in your <b>SAP ECC</b> System,<br>- Check order details in your <b>SAP S4H</b> System,<br>- Get account details from your <b>Salesforce</b> CRM,<br>- Get information about current Sales Leads from your <b>Hubspot</b>,<br>- Show all employees infromation from your <b>Workday</b>,<br>- and Order a Laptop from your companies <b>Asset Ordering Portal</b>.<br></div>';
     
         const formattedReply = formatReply(welcomeMessage);
         appendMessage(formattedReply, 'ai');
