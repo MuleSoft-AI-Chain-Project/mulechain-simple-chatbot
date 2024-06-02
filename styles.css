@@ -15,7 +15,13 @@ body {
 
 .card {
   width: 100%;
-  max-width: 400px;
+  max-width: 650;
+  border-radius: 5px;
+  box-shadow: #333;
+}
+
+.card-title {
+  text-align: center;
 }
 
 .chat-window {
@@ -39,7 +45,7 @@ body {
   width: calc(100% - 20px); /* Full width with margin consideration */
   box-sizing: border-box; /* Include padding in the element's total width and height */
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Slight shadow for better look */
-  margin: 0 10px 10px 10px; /* Margins to avoid touching edges */
+  margin: 0 10px 20px 10px; /* Margins to avoid touching edges */
 }
 
 #user-input {
@@ -58,7 +64,7 @@ body {
 #send-btn {
   border: none;
   outline: none;
-  background-color: #eee; /* Light background color for button */
+  background-color: #000000; /* Light background color for button */
   cursor: pointer; /* Pointer cursor on hover */
   display: flex;
   align-items: center;
@@ -74,7 +80,7 @@ body {
 }
 
 #send-btn svg {
-  fill: #666; /* Icon color */
+  fill: #ffffff; /* Icon color */
   width: 24px; /* Icon width */
   height: 24px; /* Icon height */
 }
@@ -97,6 +103,11 @@ body {
   margin: 5px;
 }
 
+/* Add this CSS rule to right-align the toggle switch */
+.switch {
+  margin-left: auto;
+}
+
 .dark-theme {
   background-color: #333;
   color: #f5f5f5;
@@ -116,7 +127,7 @@ body {
 }
 
 .dark-theme #user-input {
-  background-color: #666; /* Darker background color for input field in dark mode */
+  background-color: #555; /* Darker background color for input field in dark mode */
   color: #f5f5f5; /* Light text color for input field in dark mode */
 }
 
@@ -131,4 +142,28 @@ body {
 .dark-theme .bot {
   background-color: #555;
   color: #ddd;
+}
+
+.dark-theme #send-btn {
+  border: none;
+  outline: none;
+  background-color: #eee; /* Light background color for button */
+  cursor: pointer; /* Pointer cursor on hover */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+  border-radius: 50%; /* Round button */
+  transition: background-color 0.3s; /* Smooth transition */
+  margin-left: 10px; /* Space between input and button */
+}
+
+.dark-theme #send-btn:hover {
+  background-color: #ddd; /* Slightly darker on hover */
+}
+
+.dark-theme #send-btn svg {
+  fill: #000000; /* Icon color */
+  width: 24px; /* Icon width */
+  height: 24px; /* Icon height */
 }
