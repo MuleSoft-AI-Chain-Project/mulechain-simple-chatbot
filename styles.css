@@ -1,16 +1,22 @@
 body {
-  font-family: Arial, sans-serif;
-  background-color: #f5f5f5;
-  color: #333;
-  transition: background-color 0.3s, color 0.3s;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  min-height: 100vh; /* Ensure the body takes the full viewport height */
+  padding: 40px 0; /* Ensure a minimum padding of 40px at the top and bottom */
+  box-sizing: border-box; /* Include padding in the body's total height */
 }
 
 .container {
+  margin-top: auto; /* Align the container with a gap from the top */
+  margin-bottom: auto; /* Ensure it stays centered vertically */
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 100vh;
+  position: relative; /* Make container a positioned element for absolute positioning */
+  max-width: 100%;
 }
 
 .header {
@@ -20,12 +26,12 @@ body {
   align-items: center;
   justify-content: center;
   text-align: center;
-  margin-bottom: 20px;
   padding: 20px;
-  background: linear-gradient(135deg, #000000 0%, #2a5298 100%);
+  background: linear-gradient(135deg, #48c6ef 0%, #6f86d6 100%);
   background-size: cover;
   background-position: center;
-  color: white; /* Ensure the text is readable on the background */
+  color: rgb(255, 255, 255); /* Ensure the text is readable on the background */
+  box-shadow: black;
 }
 
 .logo {
@@ -49,16 +55,19 @@ body {
 .header-text h2 {
   margin: 0;
   font-size: 16px; /* Adjust the font size as needed */
-  color: #ffffff;
+  color: rgb(255, 255, 255);
   font-style: italic;
+  font-weight: 600;
 }
 
 .card {
   width: 100%;
-  max-width: 650;
+  max-width: 650px;
   border-bottom-left-radius: 10px;
   border-bottom-right-radius: 10px;
-  box-shadow: #333;
+  box-shadow: black;
+  overflow: hidden;
+  position: relative; /* Make card a positioned element */
 }
 
 .card-title {
@@ -70,11 +79,13 @@ body {
   overflow-y: auto;
   border-bottom: none; /* Remove border-bottom to avoid line */
   margin-bottom: 10px;
+  padding: 10px;
 }
 
 .output {
   display: flex;
   flex-direction: column;
+  gap: 10px; /* Add spacing between chat bubbles */
 }
 
 .input-container {
@@ -105,19 +116,21 @@ body {
 #send-btn {
   border: none;
   outline: none;
-  background-color: #000000; /* Light background color for button */
+  background-color: #007bff; /* Light background color for button */
   cursor: pointer; /* Pointer cursor on hover */
   display: flex;
   align-items: center;
   justify-content: center;
   padding: 10px;
   border-radius: 50%; /* Round button */
-  transition: background-color 0.3s; /* Smooth transition */
+  transition: background-color 0.3s, box-shadow 0.3s; /* Smooth transition */
   margin-left: 10px; /* Space between input and button */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Add slight shadow */
 }
 
 #send-btn:hover {
-  background-color: #ddd; /* Slightly darker on hover */
+  background-color: #0056b3; /* Slightly darker on hover */
+  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15); /* Enhance shadow on hover */
 }
 
 #send-btn svg {
@@ -133,6 +146,7 @@ body {
   padding: 10px;
   border-radius: 10px;
   margin: 5px;
+  max-width: 70%;
 }
 
 .bot {
@@ -142,9 +156,17 @@ body {
   padding: 10px;
   border-radius: 10px;
   margin: 5px;
+  max-width: 70%;
 }
 
 /* Add this CSS rule to right-align the toggle switch */
+.switch-container {
+  position: absolute;
+  top: 10px; /* Adjust position as needed */
+  right: 20px; /* Adjust position as needed */
+  z-index: 1000; /* Ensure it's above other elements */
+}
+
 .switch {
   margin-left: auto;
 }
@@ -161,18 +183,17 @@ body {
   align-items: center;
   justify-content: center;
   text-align: center;
-  margin-bottom: 20px;
   padding: 20px;
-  background: linear-gradient(135deg, #ffffff 0%, #ffffff 100%);
+  background: linear-gradient(135deg, #fdfbfb 0%, #ebedee 100%);
   background-size: cover;
   background-position: center;
-  color: rgb(0, 0, 0); /* Ensure the text is readable on the background */
+  color: rgb(68, 67, 67); /* Ensure the text is readable on the background */
 }
 
 .dark-theme .header-text h2 {
   margin: 0;
   font-size: 16px; /* Adjust the font size as needed */
-  color: #000000;
+  color: rgb(68, 67, 67);
 }
 
 .dark-theme .card {
@@ -216,16 +237,54 @@ body {
   justify-content: center;
   padding: 10px;
   border-radius: 50%; /* Round button */
-  transition: background-color 0.3s; /* Smooth transition */
+  transition: background-color 0.3s, box-shadow 0.3s; /* Smooth transition */
   margin-left: 10px; /* Space between input and button */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Add slight shadow */
 }
 
 .dark-theme #send-btn:hover {
   background-color: #ddd; /* Slightly darker on hover */
+  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15); /* Enhance shadow on hover */
 }
 
 .dark-theme #send-btn svg {
   fill: #000000; /* Icon color */
   width: 24px; /* Icon width */
   height: 24px; /* Icon height */
+}
+
+/* Media queries for responsive font sizes */
+@media (max-width: 768px) {
+  .header-text h1 {
+    font-size: 20px; /* Adjust font size for tablets and small screens */
+  }
+
+  .header-text h2 {
+    font-size: 14px; /* Adjust font size for tablets and small screens */
+  }
+
+  .container {
+    height: auto; /* Adjust height for tablets and small screens */
+    margin-top: 10px; /* Adjust top margin for tablets and small screens */
+  }
+}
+
+@media (max-width: 480px) {
+  .header-text h1 {
+    font-size: 18px; /* Adjust font size for mobile screens */
+  }
+
+  .header-text h2 {
+    font-size: 12px; /* Adjust font size for mobile screens */
+  }
+
+  /* Adjust switch position for mobile view to prevent overflow */
+  .switch-container {
+    right: 10px; /* Adjust position to prevent overflow */
+  }
+
+  .container {
+    height: auto; /* Adjust height for mobile screens */
+    margin-top: 10px; /* Adjust top margin for mobile screens */
+  }
 }
