@@ -1,113 +1,63 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MuleChain Agent</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            height: 100vh;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            background-color: #f0f0f0;
-        }
-        .chat-window {
-            width: 90%;
-            max-width: 600px;
-            height: 80%;
-            max-height: 600px;
-            border: 1px solid #ccc;
-            display: flex;
-            flex-direction: column;
-            background-color: white;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        }
-        .header {
-            text-align: center;
-            padding: 10px;
-            border-bottom: 1px solid #ccc;
-        }
-        .header img {
-            max-width: 100px;
-            height: auto;
-        }
-        .title {
-            font-size: 1.5em;
-            margin: 10px 0;
-        }
-        .subtitle {
-            font-size: 0.9em;
-            color: #666;
-            margin-bottom: 10px;
-        }
-        .messages {
-            flex: 1;
-            overflow-y: scroll;
-            padding: 10px;
-        }
-        .message {
-            margin: 5px 0;
-        }
-        .message.user {
-            text-align: right;
-            font-size: 14px; /* Adjust the font size as needed */
-            color: #555; /* Change the color to dark gray */
-       }
-        .message.ai {
-            text-align: left;
-            font-size: 14px; /* Adjust the font size as needed */
-            color: #2f2f2f; /* Change the color to dark gray */
-        }
-        .sender-name {
-            font-weight: bold;
-            margin-bottom: 2px;
-        }
-
-        .input-container {
-            display: flex;
-            padding: 10px;
-            border-top: 1px solid #ccc;
-        }
-        .input-container input {
-            flex: 1;
-            padding: 10px;
-            border: 1px solid #ccc;
-            border-radius: 4px;
-            margin-right: 10px;
-        }
-        .input-container button {
-            padding: 10px;
-            border: none;
-            background-color: #007BFF;
-            color: white;
-            border-radius: 4px;
-            cursor: pointer;
-        }
-        .input-container button:hover {
-            background-color: #0056b3;
-        }
-    </style>
-    <link rel="icon" href="logo.png" type="image/png">
-
-</head>
-<body>
-
-<div class="chat-window">
-    <div class="header">
-        <img src="logo.png" alt="Logo" id="logo">
-        <div class="title">MuleChain AI Agent</div>
-        <div class="subtitle">Experience autonomous agents with MuleSoft</div>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Chatbot UI</title>
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="switch right-align">
+        <label>
+          Light
+          <input type="checkbox" id="theme-toggle" />
+          <span class="lever"></span>
+          Dark
+        </label>
+      </div>
+      <div class="card">
+        <div class="card-content">
+          <span class="card-title">Chatbot</span>
+          <div id="chat-window" class="chat-window">
+            <div id="output" class="output"></div>
+          </div>
+        </div>
+        <div class="input-container">
+          <input
+            id="user-input"
+            type="text"
+            placeholder="Sende eine Nachricht an ChatGPT"
+          />
+          <button
+            id="send-btn"
+            class="btn waves-effect waves-light"
+            label="true"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 24 24"
+              width="24"
+              height="24"
+            >
+              <path fill="none" d="M0 0h24v24H0z" />
+              <path
+                d="M4 12l1.41 1.41L11 7.83V20h2V7.83l5.59 5.58L20 12l-8-8z"
+              />
+            </svg>
+          </button>
+        </div>
+      </div>
     </div>
-    <div class="messages" id="messages"></div>
-    <div class="input-container">
-        <input type="text" id="userInput" placeholder="Type your message here">
-        <button onclick="sendMessage()">Send</button>
-    </div>
-</div>
-
-<script src="script.js"></script>
-</body>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script src="script.js"></script>
+  </body>
 </html>
