@@ -38,5 +38,7 @@ function addMessage(sender, message) {
   messageDiv.classList.add(sender);
   messageDiv.textContent = message;
   outputDiv.appendChild(messageDiv);
-  outputDiv.scrollTop = outputDiv.scrollHeight;
+
+  // Auto-scroll to the bottom
+  messageDiv.scrollIntoView({ behavior: 'smooth', block: 'end' });
 }

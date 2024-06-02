@@ -70,6 +70,10 @@ body {
   position: relative; /* Make card a positioned element */
 }
 
+.card .card-content {
+  padding: 10px;
+}
+
 .card-title {
   text-align: center;
 }
@@ -79,7 +83,21 @@ body {
   overflow-y: auto;
   border-bottom: none; /* Remove border-bottom to avoid line */
   margin-bottom: 10px;
-  padding: 10px;
+  scrollbar-width: thin; /* For Firefox */
+  scrollbar-color: #888 #ffffff; /* For Firefox */
+}
+
+.chat-window::-webkit-scrollbar {
+  width: 8px; /* For WebKit browsers */
+}
+
+.chat-window::-webkit-scrollbar-thumb {
+  background-color: #ffffff; /* Handle color */
+  border-radius: 10px;
+}
+
+.chat-window::-webkit-scrollbar-track {
+  background: #ffffff; /* Track color */
 }
 
 .output {
@@ -113,17 +131,22 @@ body {
   box-sizing: border-box; /* Include padding in the element's total width and height */
 }
 
+/* Remove the green underline on focus */
+#user-input:focus {
+  border-bottom: none;
+  box-shadow: none;
+}
+
 #send-btn {
   border: none;
   outline: none;
-  background-color: #007bff; /* Light background color for button */
+  transition: background-color 0.3s, box-shadow 0.3s, transform 0.1s; /* Add transition for transform */
   cursor: pointer; /* Pointer cursor on hover */
   display: flex;
   align-items: center;
   justify-content: center;
   padding: 10px;
   border-radius: 50%; /* Round button */
-  transition: background-color 0.3s, box-shadow 0.3s; /* Smooth transition */
   margin-left: 10px; /* Space between input and button */
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Add slight shadow */
 }
@@ -135,8 +158,12 @@ body {
 
 #send-btn svg {
   fill: #ffffff; /* Icon color */
-  width: 24px; /* Icon width */
-  height: 24px; /* Icon height */
+  width: 20px; /* Icon width */
+  height: 20px; /* Icon height */
+}
+
+#send-btn:active {
+  transform: scale(0.95); /* Slightly reduce size on click for press effect */
 }
 
 .user {
@@ -201,16 +228,27 @@ body {
 }
 
 .dark-theme .chat-window {
-  border-bottom: none; /* Ensure no line in dark mode */
+  background-color: #444; /* Slightly lighter background for better contrast */
+  scrollbar-width: thin; /* For Firefox */
+  scrollbar-color: #888 #444; /* For Firefox */
+}
+
+.dark-theme .chat-window::-webkit-scrollbar-thumb {
+  background-color: #888; /* Handle color */
+  border-radius: 10px;
+}
+
+.dark-theme .chat-window::-webkit-scrollbar-track {
+  background: #444; /* Track color */
 }
 
 .dark-theme .input-container {
-  background-color: #555; /* Different background color for input container in dark mode */
-  border-top: 1px solid #555;
+  background-color: #666; /* Slightly lighter background for input container */
+  border-top: 1px solid #666;
 }
 
 .dark-theme #user-input {
-  background-color: #555; /* Darker background color for input field in dark mode */
+  background-color: #666; /* Darker background color for input field in dark mode */
   color: #f5f5f5; /* Light text color for input field in dark mode */
 }
 
@@ -230,27 +268,26 @@ body {
 .dark-theme #send-btn {
   border: none;
   outline: none;
-  background-color: #eee; /* Light background color for button */
+  transition: background-color 0.3s, box-shadow 0.3s, transform 0.1s; /* Add transition for transform */
   cursor: pointer; /* Pointer cursor on hover */
   display: flex;
   align-items: center;
   justify-content: center;
   padding: 10px;
   border-radius: 50%; /* Round button */
-  transition: background-color 0.3s, box-shadow 0.3s; /* Smooth transition */
   margin-left: 10px; /* Space between input and button */
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Add slight shadow */
 }
 
 .dark-theme #send-btn:hover {
-  background-color: #ddd; /* Slightly darker on hover */
-  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15); /* Enhance shadow on hover */
+  background-color: #1e88e5; /* Slightly darker on hover */
+  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
 }
 
 .dark-theme #send-btn svg {
-  fill: #000000; /* Icon color */
-  width: 24px; /* Icon width */
-  height: 24px; /* Icon height */
+  fill: #ccc; /* Icon color */
+  width: 20px; /* Icon width */
+  height: 20px; /* Icon height */
 }
 
 /* Media queries for responsive font sizes */
