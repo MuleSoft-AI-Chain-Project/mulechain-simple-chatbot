@@ -301,7 +301,7 @@ body {
   }
 
   .header-text h2 {
-    font-size: 12px; /* Adjust font size for mobile screens */
+    font-size: 10px; /* Adjust font size for mobile screens */
   }
 
   /* Adjust switch position for mobile view to prevent overflow */
@@ -312,5 +312,9 @@ body {
   .container {
     height: auto; /* Adjust height for mobile screens */
     margin-top: 10px; /* Adjust top margin for mobile screens */
+  }
+
+  .bot {
+    max-width: 100%;
   }
 }
