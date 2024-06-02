@@ -13,10 +13,51 @@ body {
   height: 100vh;
 }
 
+.header {
+  display: flex;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  margin-bottom: 20px;
+  padding: 20px;
+  background: linear-gradient(135deg, #000000 0%, #2a5298 100%);
+  background-size: cover;
+  background-position: center;
+  color: white; /* Ensure the text is readable on the background */
+}
+
+.logo {
+  width: 60px; /* Adjust the size as needed */
+  height: auto;
+  margin-right: 15px;
+}
+
+.header-text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.header-text h1 {
+  margin: 5px;
+  font-size: 24px; /* Adjust the font size as needed */
+  font-weight: bold;
+}
+
+.header-text h2 {
+  margin: 0;
+  font-size: 16px; /* Adjust the font size as needed */
+  color: #ffffff;
+  font-style: italic;
+}
+
 .card {
   width: 100%;
   max-width: 650;
-  border-radius: 5px;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
   box-shadow: #333;
 }
 
@@ -113,6 +154,27 @@ body {
   color: #f5f5f5;
 }
 
+.dark-theme .header {
+  display: flex;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  margin-bottom: 20px;
+  padding: 20px;
+  background: linear-gradient(135deg, #ffffff 0%, #ffffff 100%);
+  background-size: cover;
+  background-position: center;
+  color: rgb(0, 0, 0); /* Ensure the text is readable on the background */
+}
+
+.dark-theme .header-text h2 {
+  margin: 0;
+  font-size: 16px; /* Adjust the font size as needed */
+  color: #000000;
+}
+
 .dark-theme .card {
   background-color: #444;
 }
@@ -140,8 +202,8 @@ body {
 }
 
 .dark-theme .bot {
-  background-color: #555;
-  color: #ddd;
+  background-color: #e4e1e1;
+  color: #000000;
 }
 
 .dark-theme #send-btn {
