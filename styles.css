@@ -1,3 +1,4 @@
+/* Base styles for the body */
 body {
   display: flex;
   justify-content: center;
@@ -8,6 +9,7 @@ body {
   box-sizing: border-box; /* Include padding in the body's total height */
 }
 
+/* Main container styling */
 .container {
   margin-top: auto; /* Align the container with a gap from the top */
   margin-bottom: auto; /* Ensure it stays centered vertically */
@@ -19,6 +21,7 @@ body {
   max-width: 100%;
 }
 
+/* Header section styling */
 .header {
   display: flex;
   border-top-left-radius: 10px;
@@ -30,8 +33,7 @@ body {
   background: linear-gradient(135deg, #48c6ef 0%, #6f86d6 100%);
   background-size: cover;
   background-position: center;
-  color: rgb(255, 255, 255); /* Ensure the text is readable on the background */
-  box-shadow: black;
+  color: #fff; /* Ensure the text is readable on the background */
 }
 
 .logo {
@@ -55,17 +57,18 @@ body {
 .header-text h2 {
   margin: 0;
   font-size: 16px; /* Adjust the font size as needed */
-  color: rgb(255, 255, 255);
+  color: #fff;
   font-style: italic;
   font-weight: 600;
 }
 
+/* Card styling */
 .card {
   width: 100%;
   max-width: 650px;
   border-bottom-left-radius: 10px;
   border-bottom-right-radius: 10px;
-  box-shadow: black;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   overflow: hidden;
   position: relative; /* Make card a positioned element */
 }
@@ -78,13 +81,14 @@ body {
   text-align: center;
 }
 
+/* Chat window styling */
 .chat-window {
   height: 400px;
   overflow-y: auto;
   border-bottom: none; /* Remove border-bottom to avoid line */
   margin-bottom: 10px;
   scrollbar-width: thin; /* For Firefox */
-  scrollbar-color: #888 #ffffff; /* For Firefox */
+  scrollbar-color: #888 #fff; /* For Firefox */
 }
 
 .chat-window::-webkit-scrollbar {
@@ -92,12 +96,12 @@ body {
 }
 
 .chat-window::-webkit-scrollbar-thumb {
-  background-color: #ffffff; /* Handle color */
+  background-color: #888; /* Handle color */
   border-radius: 10px;
 }
 
 .chat-window::-webkit-scrollbar-track {
-  background: #ffffff; /* Track color */
+  background: #fff; /* Track color */
 }
 
 .output {
@@ -106,6 +110,7 @@ body {
   gap: 10px; /* Add spacing between chat bubbles */
 }
 
+/* Input container styling */
 .input-container {
   display: flex;
   align-items: center; /* Center items vertically */
@@ -118,6 +123,7 @@ body {
   margin: 0 10px 20px 10px; /* Margins to avoid touching edges */
 }
 
+/* Input field styling */
 #user-input {
   flex-grow: 1; /* Make input take available space */
   border: none;
@@ -137,6 +143,7 @@ body {
   box-shadow: none;
 }
 
+/* Send button styling */
 #send-btn {
   border: none;
   outline: none;
@@ -166,6 +173,7 @@ body {
   transform: scale(0.95); /* Slightly reduce size on click for press effect */
 }
 
+/* Chat message styling */
 .user {
   align-self: flex-end;
   background-color: #007bff;
@@ -183,10 +191,10 @@ body {
   padding: 10px;
   border-radius: 10px;
   margin: 5px;
-  max-width: 70%;
+  max-width: 95%;
 }
 
-/* Add this CSS rule to right-align the toggle switch */
+/* Switch container styling */
 .switch-container {
   position: absolute;
   top: 10px; /* Adjust position as needed */
@@ -198,29 +206,19 @@ body {
   margin-left: auto;
 }
 
+/* Dark theme styling */
 .dark-theme {
   background-color: #333;
   color: #f5f5f5;
 }
 
 .dark-theme .header {
-  display: flex;
-  border-top-left-radius: 10px;
-  border-top-right-radius: 10px;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  padding: 20px;
   background: linear-gradient(135deg, #fdfbfb 0%, #ebedee 100%);
-  background-size: cover;
-  background-position: center;
-  color: rgb(68, 67, 67); /* Ensure the text is readable on the background */
+  color: #444; /* Ensure the text is readable on the background */
 }
 
 .dark-theme .header-text h2 {
-  margin: 0;
-  font-size: 16px; /* Adjust the font size as needed */
-  color: rgb(68, 67, 67);
+  color: #444;
 }
 
 .dark-theme .card {
@@ -262,32 +260,20 @@ body {
 
 .dark-theme .bot {
   background-color: #e4e1e1;
-  color: #000000;
+  color: #000;
 }
 
 .dark-theme #send-btn {
-  border: none;
-  outline: none;
-  transition: background-color 0.3s, box-shadow 0.3s, transform 0.1s; /* Add transition for transform */
-  cursor: pointer; /* Pointer cursor on hover */
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 10px;
-  border-radius: 50%; /* Round button */
-  margin-left: 10px; /* Space between input and button */
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Add slight shadow */
+  background-color: #ffffff; /* Light background color for button */
 }
 
 .dark-theme #send-btn:hover {
-  background-color: #1e88e5; /* Slightly darker on hover */
-  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
+  background-color: #ddd; /* Slightly darker on hover */
+  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15); /* Enhance shadow on hover */
 }
 
 .dark-theme #send-btn svg {
-  fill: #ccc; /* Icon color */
-  width: 20px; /* Icon width */
-  height: 20px; /* Icon height */
+  fill: #000; /* Icon color */
 }
 
 /* Media queries for responsive font sizes */
