@@ -73,10 +73,6 @@ body {
   position: relative; /* Make card a positioned element */
 }
 
-.card .card-content {
-  padding: 10px;
-}
-
 .card-title {
   text-align: center;
 }
@@ -107,7 +103,7 @@ body {
 .output {
   display: flex;
   flex-direction: column;
-  gap: 10px; /* Add spacing between chat bubbles */
+  gap: 15px; /* Add spacing between chat bubbles */
 }
 
 /* Input container styling */
@@ -190,8 +186,14 @@ body {
   color: #333;
   padding: 10px;
   border-radius: 10px;
-  margin: 5px;
+  margin-top: 0;
+  padding-top: 5px;
   max-width: 95%;
+}
+
+.message {
+  margin: 0;
+  padding: 5px 10px;
 }
 
 /* Switch container styling */
