@@ -296,6 +296,10 @@ body {
 }
 
 @media (max-width: 480px) {
+  .header-text {
+    margin-left: 0px;
+  }
+
   .header-text h1 {
     font-size: 18px; /* Adjust font size for mobile screens */
   }
