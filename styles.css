@@ -27,9 +27,7 @@ body {
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
   align-items: center;
-  justify-content: center;
-  text-align: center;
-  padding: 20px;
+  padding: 10px;
   background: linear-gradient(135deg, #48c6ef 0%, #6f86d6 100%);
   background-size: cover;
   background-position: center;
@@ -37,19 +35,22 @@ body {
 }
 
 .logo {
-  width: 60px; /* Adjust the size as needed */
+  width: 50px; /* Adjust the size as needed */
   height: auto;
   margin-right: 15px;
 }
 
+/* Align header text to the left */
 .header-text {
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: flex-start; /* Align text to the left */
+  text-align: left; /* Ensure text is left-aligned */
+  margin-left: 15px; /* Add some space between the logo and the text */
 }
 
 .header-text h1 {
-  margin: 5px;
+  margin: 5px 0;
   font-size: 24px; /* Adjust the font size as needed */
   font-weight: bold;
 }
@@ -188,7 +189,7 @@ body {
   border-radius: 10px;
   margin-top: 0;
   padding-top: 5px;
-  max-width: 95%;
+  max-width: 75%;
 }
 
 .message {

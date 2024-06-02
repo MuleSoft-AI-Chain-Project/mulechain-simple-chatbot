@@ -85,18 +85,16 @@ function formatReply(reply) {
 // Function to add the introductory message from the bot
 function addIntroMessage() {
   const introMessage = `
-    <p>Hi, my name is Max Mule.</p>
-    <br>
-    <p>I am an AI Agent built using MuleChain and deployed on MuleSoft Cloudhub 2.</p>
+    <p>Hi, I'm Max Mule, an AI Agent built with MuleChain on MuleSoft</p>
     <br>
     <p>Here are my key skills:</p>
     <ul>
-      <li>- Checking Inventory in your SAP ECC System</li>
-      <li>- Check order details in your SAP S4H System</li>
-      <li>- Get account details from your Salesforce CRM</li>
-      <li>- Get information about current Sales Leads from your Hubspot</li>
-      <li>- Show all employees information from your Workday</li>
-      <li>- Order a Laptop from your company's Asset Ordering Portal.</li>
+      <li>- Check SAP ECC inventory</li>
+      <li>- Retrieve SAP S4H order details</li>
+      <li>- Access Salesforce CRM accounts details</li>
+      <li>- Gather Hubspot sales leads</li>
+      <li>- Display Workday employee info</li>
+      <li>- Order laptops from your asset portal</li>
     </ul>
   `;
 
