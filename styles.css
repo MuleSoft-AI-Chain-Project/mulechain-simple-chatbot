@@ -5,7 +5,7 @@ body {
   align-items: center;
   height: 100vh;
   min-height: 100vh; /* Ensure the body takes the full viewport height */
-  padding: 40px 0; /* Ensure a minimum padding of 40px at the top and bottom */
+  padding: 25px 0; /* Ensure a minimum padding of 40px at the top and bottom */
   box-sizing: border-box; /* Include padding in the body's total height */
 }
 
