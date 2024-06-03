@@ -62,7 +62,7 @@ function formatReply(reply) {
   const sections = reply.substring(colonIndex + 1).split('\n\n');
 
   // Join the main message with a line break
-  let formattedMessage = mainMessage;
+  let formattedMessage = mainMessage + '<br>';
 
   // For each section, handle bullet points and paragraphs
   sections.forEach((section) => {
@@ -71,13 +71,15 @@ function formatReply(reply) {
       const trimmedParagraph = paragraph.trim();
       if (trimmedParagraph) {
         if (index === 0) {
-          formattedMessage += `${trimmedParagraph}`;
+            formattedMessage += `${trimmedParagraph}<br>`;
         } else {
-          formattedMessage += `<br>- ${trimmedParagraph}`;
+            formattedMessage += `- ${trimmedParagraph}<br>`;
         }
-      }
-    });
-  });
+    } else if (index === paragraphs.length - 1) {
+        formattedMessage += '<br>';
+    }
+});
+});
 
   return formattedMessage;
 }
@@ -85,7 +87,7 @@ function formatReply(reply) {
 // Function to add the introductory message from the bot
 function addIntroMessage() {
   const introMessage = `
-    <p>Hi, I'm Max Mule, an AI Agent built with MuleChain on MuleSoft</p>
+    <p>Hi, I'm Max Mule, an AI Agent built with MuleChain on the MuleSoft Anypoint Platform.</p>
     <br>
     <p>Here are my key skills:</p>
     <ul>
