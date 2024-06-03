@@ -66,7 +66,7 @@ function formatReply(reply) {
 
   // For each section, handle bullet points and paragraphs
   sections.forEach((section) => {
-    const paragraphs = section.trim().split('\n-');
+    const paragraphs = section.trim().split('/\n-|\n   -/');
     paragraphs.forEach((paragraph, index) => {
       const trimmedParagraph = paragraph.trim();
       if (trimmedParagraph) {
