@@ -91,12 +91,12 @@ function addIntroMessage() {
     <br>
     <p>Here are my key skills:</p>
     <ul>
-      <li>- Check SAP ECC inventory</li>
-      <li>- Retrieve SAP S4H order details</li>
-      <li>- Access Salesforce CRM accounts details</li>
-      <li>- Gather Hubspot sales leads</li>
-      <li>- Display Workday employee info</li>
-      <li>- Order laptops from your asset portal</li>
+      <li>- Check <b>SAP ECC</b> inventory</li>
+      <li>- Retrieve <b>SAP S4H</b> order details</li>
+      <li>- Access <b>Salesforce</b> CRM accounts details</li>
+      <li>- Gather <b>Hubspot</b> sales leads</li>
+      <li>- Display <b>Workday</b> employee info</li>
+      <li>- Order laptops from your asset <b>portal</b></li>
     </ul>
   `;
 
