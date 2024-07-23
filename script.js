@@ -107,7 +107,7 @@ function addIntroMessage() {
     </ul>
   `;
 
-  addMessage('bot', formatReply(introMessage));
+  addMessage('bot', introMessage);
 }
 
 // Add the introductory message when the page loads
