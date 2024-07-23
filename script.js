@@ -55,7 +55,14 @@ function addMessage(sender, message) {
   // Auto-scroll to the bottom
   messageDiv.scrollIntoView({ behavior: 'smooth', block: 'end' });
 }
+
+
 function formatReply(reply) {
+  // Assuming `reply` is a plain text string
+  return reply.replace(/\n/g, '<br>');
+}
+
+function formatReply1(reply) {
   // Split the reply string at the first colon
   const colonIndex = reply.indexOf(':');
   const mainMessage = reply.substring(0, colonIndex).trim();
