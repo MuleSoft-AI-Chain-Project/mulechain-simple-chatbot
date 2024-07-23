@@ -26,7 +26,7 @@ async function sendMessage() {
 
   try {
     const response = await fetch(
-      'https://mulechain-agent-01-e30j4.5sc6y6-2.usa-e2.cloudhub.io/composed',
+      'https://autonomuous-ai-agent-i3evmd.5sc6y6-3.usa-e2.cloudhub.io/aiservice',
       {
         method: 'POST',
         headers: {
