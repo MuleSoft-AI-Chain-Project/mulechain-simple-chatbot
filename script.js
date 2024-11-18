@@ -26,14 +26,14 @@ async function sendMessage() {
 
   try {
     const response = await fetch(
-      'https://autonomuous-ai-agent-i3evmd.5sc6y6-3.usa-e2.cloudhub.io/aiservice',
+      'https://autonomous-ai-nu3o8c.5sc6y6-1.usa-e2.cloudhub.io/aiservice',
       {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
           'Access-Control-Allow-Origin': '*',
         },
-        body: JSON.stringify({ data: userInput }),
+        body: JSON.stringify({ question: userInput }),
       }
     );
     const data = await response.json();
