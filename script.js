@@ -37,7 +37,7 @@ async function sendMessage() {
       }
     );
     const data = await response.json();
-    const formattedReply = formatReply(data.reply);
+    const formattedReply = formatReply(data.response);
     addMessage('bot', formattedReply);
   } catch (error) {
     addMessage('bot', 'Error: Unable to communicate with the AI.');
